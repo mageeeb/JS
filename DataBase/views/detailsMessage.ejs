@@ -1,0 +1,12 @@
+<%- include('header') -%>
+    <header>
+        <h1><%=titre%></h1>
+    </header>
+    <section id="messages">
+        <article>
+            <p>Message #<%= donnees.id %> - Envoyé par <%= donnees.nom %>, le <%= moment(donnees.datemessage).format('DD-MMM-YYYY HH:mm:ss') %></>
+            <h4><%= donnees.message %></h4>
+        </article>
+        <p><a href="/messages/list">Retour à la liste</a></p>
+    </section>
+<%- include('footer') -%>    

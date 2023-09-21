@@ -1,0 +1,13 @@
+<%- include('header') -%>
+    <h1><%= titre %></h1>
+    <h3>Bonjour <%= nom %>,</h3>
+    <p>Nous avons bien reçu votre message :</p>
+    <p class="reponse"><%= msg %></p>
+    
+    <div id="liens">
+        <a href="/">Retour vers l'accueil</a>
+        <a href="/messages">Tableau des messages</a>
+        <a href="/messages/list">Liste détaillée des messages</a>
+        <a href="/contact">Envoyer un autre message</a>
+    </div>
+<%- include('footer') -%>

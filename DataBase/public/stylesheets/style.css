@@ -1,0 +1,81 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* Formulaire de contact */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label, input {
+  width: 100%;
+  height: 30px;
+}
+
+input[type="submit"] {
+  width: 50%;
+  height: 50px;
+}
+
+.reponse {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+/* Navigation */
+
+#liens {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+#liens a {
+  display:block;
+}
+
+/* Liste des messages */
+#messages article {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: lightgrey;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+#messages article p {
+  font-style: italic;
+}
+
+/* Tableau des messages */
+#messages table, #messages tr, #messages th, #messages td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+#messages tr:nth-child(even) {
+  background-color: lightgrey;
+}
+
+/* Modification d'un message */
+#confirmbuttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#confirmbuttons input[type="submit"], #confirmform button, #editform input[type="submit"] {
+  display: block;
+  height: 50px;
+  width: 200px;
+}

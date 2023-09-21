@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= titre %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <h1><%= titre %></h1>
+    <h3>Bonjour <%= nom %>,</h3>
+    <p>Nous avons bien reçu votre message :</p>
+    <p class="reponse"><%= msg %></p>
+    
+    <div id="liens">
+        <a href="/">Retour vers l'accueil</a>
+        <a href="/messages">Liste des messages</a>
+        <a href="/contact">Envoyer un autre message</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<%- include('header') -%>
+    <header>
+      <h1><%=titre%></h1>
+    </header>
+    <section>
+        <h1>Formulaire de contact</h1>
+        <form id="contact" name="contact" method="POST" action="/messages/create">
+    <!--    <form name="contact" method="POST" action="/traitement">  -->
+            <label for="nom">Nom : </label>
+            <input id="nom" name="nom" type="text" placeholder="Entrez votre nom" />
+            <br />
+            <label for="msg">Votre message : </label>
+            <input id="msg" name="msg" type="text" placeholder="Entrez votre message" />
+            <br />
+            <input type="submit" value="Envoyer" />
+        </form>
+    </section>    
+<%- include('footer') -%>

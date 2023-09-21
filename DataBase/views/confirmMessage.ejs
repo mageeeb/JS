@@ -1,0 +1,22 @@
+<%- include('header') -%>
+    <header>
+      <h1><%=titre%></h1>
+    </header>
+    <section>
+        <h2>Etes-vous certain de vouloir supprimer le message suivant ?</h2>
+        <form id="confirmform" name="confirmform" method="POST" action="/messages/delete/<%= donnees.id %>">
+            <input name="id" type="hidden" value="<%= donnees.id %>" />
+            <label for="nom">Nom : </label>
+            <input id="nom" name="nom" type="text" value="<%= donnees.nom %>" />
+            <br />
+            <label for="msg">Votre message : </label>
+            <input id="msg" name="msg" type="text" value="<%= donnees.message %>" />
+            <br />
+            <div id="confirmbuttons">
+                <button onclick="event.preventDefault(); window.location.href = '/messages/list';">Annuler</button>
+                <input type="submit" value="Supprimer" />
+            </div>
+        </form>
+        <script></sc
+    </section>    
+<%- include('footer') -%>

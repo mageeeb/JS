@@ -1,0 +1,34 @@
+<%- include('header') -%>
+    <header>
+        <h1><%=titre%></h1>
+    </header>
+    <section id="messages">
+        <!-- Si je reçois des données, j'affiche le tableau -->
+        <% if (donnees.length) { %>
+        <table>
+            <thead>
+                <tr>
+                    <th width="5%">ID</th>
+                    <th width="20%">Nom</th>
+                    <th width="50%">Message</th>
+                    <th width="25%">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <% for(var i=0; i<donnees.length; i++) { %>
+                <tr>
+                    <td><%= donnees[i].id %></td>
+                    <td><%= donnees[i].nom %></td>
+                    <td><%= donnees[i].message %></td>
+                    <td><%= moment(donnees[i].datemessage).format('DD-MMM-YYYY HH:mm:ss') %></td>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+        <% } %>
+        <!-- S'il n'y a pas de données, j'affiche le message suivant -->
+        <% if (!donnees.length) { %>
+        <h3 class="au-centre">Pas de données actuellement !</h3>
+        <% } %>
+    </section>
+<%- include('footer') -%>    

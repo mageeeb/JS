@@ -1,0 +1,17 @@
+<%- include('header') -%>
+    <header>
+      <h1><%=titre%></h1>
+    </header>
+    <section>
+        <form id="editform" name="editform" method="POST" action="/messages/update/<%= donnees.id %>">
+            <input name="id" type="hidden" value="<%= donnees.id %>" />
+            <label for="nom">Nom : </label>
+            <input id="nom" name="nom" type="text" value="<%= donnees.nom %>" />
+            <br />
+            <label for="msg">Votre message : </label>
+            <input id="msg" name="msg" type="text" value="<%= donnees.message %>" />
+            <br />
+            <input type="submit" value="Mettre à jour" />
+        </form>
+    </section>    
+<%- include('footer') -%>
